@@ -53,7 +53,7 @@ get stuck.
 
 8. Click the **Test** link near the top and click on **Trader** on the left.  Now, add three traders, one at a time, using the **Create New Participant** button in the upper left. The fields can be anything you want but you will need to use the *tradeId* field later, so give them something simple, like, *1, 2, and 3* or make the *tradeId* the same as their first name.
 
-.. image:: images/07.png
+.. image:: images/08.png
 
 9. Click on **Commodity** on the left.  Now, add three commodities, one at a time, using the **Create New Asset** button in the upper left. The values can be anything, but make *tradingSymbol* something easy to remember.  As you create each asset, in the *owner* field, replace the randomly generated number to the right of the *#* symbol in *resource:org.acme.trading.Trader#5139*  with the *tradeId* of one of the Traders you created in the prior step.
 
