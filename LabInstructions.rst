@@ -25,23 +25,44 @@ get stuck.
 
 1. Click the large button that reads **Deploy a new business network**
 
+.. image:: images/01.png
+
 2. Scroll down until you see a large button that says **trade-network** and click it
+
+.. image:: images/02.png
 
 3. On the right side of your screen, click the **Deploy** button
 
+.. image:: images/03.png
+
 4. You should now see a "card" that says *admin@trade-network* near the top. Click the link at the bottom that says **Connect Now->**
+
+.. image:: images/04.png
 
 5. Click the **Model File** link on the left and examine the definitions in the model
 
+.. image:: images/05.png
+
 6. Click the **Script File** link on the left and you will see the Javascript functions that execute when you submit a transaction to Composer.  Composer calls these functions *transaction processor functions*.  If you do not know Javascript, that's okay,  you can get by in this lab without it.  The people in your organization who will be writing these *transaction processor functions* for your real use cases will need to know Javascript though.
+
+.. image:: images/06.png
 
 7. Click the **Access Control** link on the left and you will see a default set of permissions that basically allows anybody to do anything. You would never use these definitions as is in a real use case.  You will use some more realistic definitions later in this lab.
 
+.. image:: images/07.png
+
 8. Click the **Test** link near the top and click on **Trader** on the left.  Now, add three traders, one at a time, using the **Create New Participant** button in the upper left. The fields can be anything you want but you will need to use the *tradeId* field later, so give them something simple, like, *1, 2, and 3* or make the *tradeId* the same as their first name.
+
+.. image:: images/07.png
 
 9. Click on **Commodity** on the left.  Now, add three commodities, one at a time, using the **Create New Asset** button in the upper left. The values can be anything, but make *tradingSymbol* something easy to remember.  As you create each asset, in the *owner* field, replace the randomly generated number to the right of the *#* symbol in *resource:org.acme.trading.Trader#5139*  with the *tradeId* of one of the Traders you created in the prior step.
 
+.. image:: images/09.png
+
 10. You should now have three participants and three commodities. Next you will create an identity for each participant so that you can log on as a participant.  Currently, you are doing everything as the *admin* userid.  Click on **admin** in the upper right and then click **ID Registry** in the dropdown that appears.
+
+.. image:: images/10.png
+
 11. Click **Issue New ID** in the upper right.
 12. Enter a name for **ID Name**.  It can be anything, but choosing the first name of one of your participants is probably easiest. 
 13. In the **Participant** field, start typing in *Trader*, and before you get too far, you will be presented with a dropdown list that shows the three Traders you defined earlier in the lab.  Choose the one that matches the *ID Name* you entered and click the **Create New** button.
