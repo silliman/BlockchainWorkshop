@@ -102,7 +102,7 @@ get stuck.
  }
 
 19. Click the **Update** link on the left.
-20. Now, switch among the three non-admin IDs again, and this time, if you try to run the Trade transaction against a Commodity owned by somebody else, you will not be able to do so.  You will be able to run it against transactions you own. That is, you can give your commodity to others, but you can't "steal" or "redistribute" others' wealth as you see fit.
+20. Now, switch among the three non-admin IDs again, and this time, if you try to run the Trade transaction against a Commodity owned by somebody else, you will not be able to do so.  You will be able to run it against commodities you own. That is, you can give your commodity to others, but you can't "steal" or "redistribute" others' wealth as you see fit.
 
 **Bonus questions and activities**
 
