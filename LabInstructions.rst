@@ -64,13 +64,39 @@ get stuck.
 .. image:: images/10.png
 
 11. Click **Issue New ID** in the upper right.
+
+.. image:: images/11.png
+
 12. Enter a name for **ID Name**.  It can be anything, but choosing the first name of one of your participants is probably easiest. 
+
+.. image:: images/12.png
+
 13. In the **Participant** field, start typing in *Trader*, and before you get too far, you will be presented with a dropdown list that shows the three Traders you defined earlier in the lab.  Choose the one that matches the *ID Name* you entered and click the **Create New** button.
-14. The new ID you created shows at the top of the screen with a status of *In my wallet* and at the bottom of the screen with a status of *ISSUED*.  Move your cursor over the line at the top of the screen containing your new ID and click the **Use now** button that now appears.  You will see that the status for your ID at the bottom of the screen has changed from *ISSUED* to *ACTIVATED*. This is similar in concept to having a credit card that is issued to someone but it does not get activated until later.  (The analogy isn't perfect, since a credit card usually needs to be activated *before* first use, whereas these Composer IDs are activated *upon* first use).
+
+.. image:: images/13.png
+
+14. The new ID you created shows at the top of the screen with a status of *In my wallet* and at the bottom of the screen with a status of *ISSUED*.  Move your cursor over the line at the top of the screen containing your new ID and click the **Use now** button that now appears.  
+
+.. image:: images/14.png
+
+You will see that the status for your ID at the bottom of the screen has changed from *ISSUED* to *ACTIVATED*. This is similar in concept to having a credit card that is issued to someone but it does not get activated until later.  (The analogy isn't perfect, since a credit card usually needs to be activated *before* first use, whereas these Composer IDs are activated *upon* first use).
+
+.. image:: images/14b.png
+
 15. Switch back to using the *admin* userid and then create a new ID for each of the other two participants you created.
-16. Now try switching among the three new IDs and use the **Trade** transaction to change the owner of a commodity. What you can observe is that any userid can change the commodity of any owner-  in essence, they can "steal" anybody else's commodity for themselves or "give" it to somebody else.  Certainly an unrealistic scenario.  This is because of the wide open default access control list.
+16. Now try switching among the three new IDs and use the **Trade** transaction to change the owner of a commodity. What you can observe is that any userid can change the commodity of any owner-  in essence, they can "steal" anybody else's commodity for themselves or "give" it to somebody else.  Certainly an unrealistic scenario.  This is because of the wide open default access control list. (To get to the *Trade* transaction, click the **Test** link at the top and then click the **Submit Transaction** button on the left.
+
+.. image:: images/16.png
+
 17. Click on the **Define** link at the top and then click on **Access Control** on the left. 
-18. Place your cursor at the beginning of line 4 (the first three lines are comments) and hit **Enter** a couple times to create a couple of blank lines between the comments and the first rule.  Click your cursor at the front of the first blank line and then copy and paste these rules there:
+
+.. image:: images/17.png
+
+18. Place your cursor at the beginning of line 4 (the first three lines are comments) and hit **Enter** a couple times to create a couple of blank lines between the comments and the first rule.  
+
+.. image:: images/18.png
+
+Click your cursor at the front of the first blank line and then copy and paste these rules there so that they will be ahead of the rules that were already present::
 ::
 
  rule updateOwnCommodity {
@@ -102,12 +128,16 @@ get stuck.
  }
 
 19. Click the **Update** link on the left.
-20. Now, switch among the three non-admin IDs again, and this time, if you try to run the Trade transaction against a Commodity owned by somebody else, you will not be able to do so.  You will be able to run it against commodities you own. That is, you can give your commodity to others, but you can't "steal" or "redistribute" others' wealth as you see fit.
+
+.. image:: images/19.png
+
+20. Now, switch among the three non-admin IDs again, and this time, if you try to run the Trade transaction against a Commodity owned by somebody else, you will not be able to do so.  You will be able to run it against commodities you own. That is, you can give your commodity to others, but you can't "steal" or "redistribute" others' wealth as you see fit. For example, observe the error message (highlighted here in yellow for you) when Jin tried to steal Barry's Bitcoin:
+
+.. image:: images/20.png
 
 **Bonus questions and activities**
 
 1. Although you can't update others' commodities, you can still see everybody else's commodities.  It is more realistic to expect you could see only your own commodities.  How would you change the Access Control rules to keep you from even seeing anybody else's commodities?
-2. This sample business network only allows a single owner of a commodity.  It does not seem to be designed to allow multiple holders of the same commodity. How would you change the design to allow multiple holders of the same commodity?
+2. This sample business network only allows a single owner of a commodity.  It does not seem to be designed to allow multiple holders of the same commodity. How would you change the design to allow multiple holders of the same commodity? 
 3. There are some queries defined in this network.  We did not cover queries in this lab.  Composer queries are similar in syntax to SQL queries.  There is also a second transaction named *RemoveHighQuantityCommodities* that we did not discuss. This transaction actually executes one of these queries. See if you can find in the *Script file* where this query is called, and see if you can find in the *Query file* what this query does.
 4. Queries only return results that your ID has access to.  For instance, the *admin* userid currently can see all commodities, but *if you updated the access control list as suggested in bonus question 1*, then each of the other three IDs will only see results for the commodities they own. *RemoveHighQuantityCommodities* seems to be a rather contrived transaction to begin with, as it just blindly deletes any commodities that have a quantity above 60.  If *admin* were to run this, she would be chopping people's "portfolios" indiscriminately.  If you made the changes to satisfy bonus question 1 and one of your other three IDs were to run this, they would only be shooting themselves in the foot with your updated access list-  they would only be deleting items from their own portfolio, and nobody else's!
-
