@@ -1,2 +1,2 @@
 # BlockchainWorkshop
-January 2018
+April 12, 2018 Honolulu, HI, USA
